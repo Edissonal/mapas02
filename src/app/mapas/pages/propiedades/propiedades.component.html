@@ -1,0 +1,27 @@
+<div class="row" style="margin-left: 15%;">
+<div class="col-10">
+<div class="col">
+    <h1>lista de Propiedades</h1>
+    <hr>
+</div>
+</div>
+</div>
+
+<div class="row container" style="margin-left: 13%;">
+    <div class="col-10">
+        <div class="col">
+            <div class="row">
+                <div class="col-4 mb-2"
+                     *ngFor="let propiedad of propiedades">
+                    <div class="card">
+                        <app-minimapa  [lngLat]="propiedad.lngLat" class="card-img-top"></app-minimapa>
+                        <div class="card-body">
+                            <h5 class="card-title">{{propiedad.titulo}}</h5>
+                            <p class="card-text">{{propiedad.descripcion}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
